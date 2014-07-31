@@ -34,12 +34,12 @@ typedef struct loop_t {
 /*
  *    internal function
  */
-inline static loop_t* get_loop(lua_State *L, int index) {
+__inline static loop_t* get_loop(lua_State *L, int index) {
     loop_t *lo = (loop_t*)luaL_checkudata(L, index, LOOP_METATABLE);
     return lo;
 }
 
-inline static void setloop(lua_State *L, struct ev_loop *loop) {
+__inline static void setloop(lua_State *L, struct ev_loop *loop) {
     loop_t *lo = (loop_t*)lua_newuserdata(L, sizeof(loop_t));
     luaL_getmetatable(L, LOOP_METATABLE);
     lua_setmetatable(L, -2);
@@ -190,17 +190,21 @@ LOOP_METHOD_UNSIGNED(pending_count)
 //  2: flags
 //  1: loop
 static int loop_run(lua_State *L) {
-    if(lua_gettop(L) != 4) {
+    loop_t *lo = 0;
+	int flags = 0;
+	struct ev_loop *loop = 0;
+
+	if(lua_gettop(L) != 4) {
         return luaL_error(L, "wrong arguments count, need 4");
     }
 
-    loop_t *lo = get_loop(L, 1);
-    int flags = luaL_checkint(L, 2);
+    lo = get_loop(L, 1);
+    flags = luaL_checkint(L, 2);
     luaL_checktype(L, 3, LUA_TFUNCTION);
     luaL_checkany(L, 4);
     lua_pushcfunction(L, traceback);
 
-    struct ev_loop *loop = lo->loop;
+    loop = lo->loop;
     ev_set_userdata(loop, L);
     lua_pushboolean(L, ev_run(loop, flags));
     ev_set_userdata(loop, NULL);
@@ -248,7 +252,7 @@ static const luaL_Reg methods_loop[] = {
     }
 
 #define WATCHER_GET(type) \
-    inline static ev_##type* get_##type(lua_State *L, int index) { \
+    __inline static ev_##type* get_##type(lua_State *L, int index) { \
         ev_##type *w = (ev_##type*)luaL_checkudata(L, index, WATCHER_METATABLE(type)); \
         return w; \
     }
@@ -480,7 +484,20 @@ _add_unsigned_constant(lua_State *L, const char* name, unsigned int value) {
 #define ADD_CONSTANT(L, name) _add_unsigned_constant(L, #name, name);
 
 int luaopen_event_c(lua_State *L) {
-    luaL_checkversion(L);
+	luaL_Reg l[] = {
+		{"version", ev_version},
+		{"default_loop", default_loop},
+		{"new_loop", new_loop},
+		{"new_io", new_io},
+		{"new_timer", new_timer},
+		{"new_signal", new_signal},
+		{"new_prepare", new_prepare},
+		{"new_check", new_check},
+		{"new_idle", new_idle},
+		{NULL, NULL}
+	};
+	
+	luaL_checkversion(L);
 
     // call create metatable
     CREATE_METATABLE(loop, L);
@@ -491,18 +508,6 @@ int luaopen_event_c(lua_State *L) {
     CREATE_METATABLE(check, L);
     CREATE_METATABLE(idle, L);
 
-    luaL_Reg l[] = {
-        {"version", ev_version},
-        {"default_loop", default_loop},
-        {"new_loop", new_loop},
-        {"new_io", new_io},
-        {"new_timer", new_timer},
-        {"new_signal", new_signal},
-        {"new_prepare", new_prepare},
-        {"new_check", new_check},
-        {"new_idle", new_idle},
-        {NULL, NULL}
-    };
     luaL_newlib(L, l);
 
     // add constant

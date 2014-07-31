@@ -15,3 +15,13 @@ libev/event.lo
 libev/event.o
 libev/libev.la
 libev/libtool
+*.user
+*.pdb
+*.obj
+*.manifest
+*.res
+*.dep
+*.ncb
+*.idb
+*.ilk
+*.suo

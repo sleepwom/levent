@@ -4,7 +4,7 @@
 #include "lua.h"
 #include "lauxlib.h"
 
-inline static void
+__inline static void
 _add_unsigned_constant(lua_State *L, const char* name, unsigned int value) {
     lua_pushunsigned(L, value);
     lua_setfield(L, -2, name);

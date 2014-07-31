@@ -41,6 +41,9 @@
 
 /* timeb.h is actually xsi legacy functionality */
 #include <sys/timeb.h>
+#include <winsock2.h>
+
+#include "ev.h"
 
 /* note: the comment below could not be substantiated, but what would I care */
 /* MSDN says this is required to handle SIGFPE */

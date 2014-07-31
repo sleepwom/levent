@@ -44,6 +44,11 @@
 /* for REAL unix systems */
 #  include <sys/select.h>
 # endif
+#else
+#  include "ev.h"
+#  include <assert.h>
+#  include <winsock2.h>
+#  include "ev_wrap.h"
 #endif
 
 #ifndef EV_SELECT_USE_FD_SET
