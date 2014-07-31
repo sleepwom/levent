@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding = "Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="event"
+	ProjectGUID="{693C494E-498F-463A-9E54-CD0E8DD159B2}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="event.dir\Debug"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				AssemblerListingLocation="Debug/"
+				BasicRuntimeChecks="3"
+				CompileAs="1"
+				DebugInformationFormat="3"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="0"
+				Optimization="0"
+				RuntimeLibrary="3"
+				SuppressStartupBanner="FALSE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\&quot;Debug\&quot;;event_EXPORTS"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\&quot;Debug\&quot;;event_EXPORTS"/>
+			<Tool
+				Name="VCMIDLTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"
+CommandLine="cd K:\KinCode\levent\levent\libev&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;K:&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;CFLAGS=-fPIC ./configure --enable-shared=no&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;make&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /machine:X86 /debug"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ev.lib "
+				OutputFile="K:\KinCode\levent\levent\bin\Debug\event.so"
+				Version="0.0"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\libev\.libs\$(OutDir),..\libev\.libs"
+				ProgramDatabaseFile="K:\KinCode\levent\levent\bin\Debug\event.pdb"
+				GenerateDebugInformation="TRUE"
+				ImportLibrary="K:\KinCode\levent\levent\bin\Debug\event.lib"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="event.dir\Release"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				AssemblerListingLocation="Release/"
+				CompileAs="1"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="2"
+				Optimization="2"
+				RuntimeLibrary="2"
+				SuppressStartupBanner="FALSE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\&quot;Release\&quot;;event_EXPORTS"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\&quot;Release\&quot;;event_EXPORTS"/>
+			<Tool
+				Name="VCMIDLTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"
+CommandLine="cd K:\KinCode\levent\levent\libev&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;K:&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;CFLAGS=-fPIC ./configure --enable-shared=no&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;make&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /machine:X86"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ev.lib "
+				OutputFile="K:\KinCode\levent\levent\bin\Release\event.so"
+				Version="0.0"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\libev\.libs\$(OutDir),..\libev\.libs"
+				ProgramDatabaseFile="K:\KinCode\levent\levent\bin\Release\event.pdb"
+				ImportLibrary="K:\KinCode\levent\levent\bin\Release\event.lib"/>
+		</Configuration>
+		<Configuration
+			Name="MinSizeRel|Win32"
+			OutputDirectory="MinSizeRel"
+			IntermediateDirectory="event.dir\MinSizeRel"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				AssemblerListingLocation="MinSizeRel/"
+				CompileAs="1"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="1"
+				Optimization="1"
+				RuntimeLibrary="2"
+				SuppressStartupBanner="FALSE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;;event_EXPORTS"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;;event_EXPORTS"/>
+			<Tool
+				Name="VCMIDLTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"
+CommandLine="cd K:\KinCode\levent\levent\libev&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;K:&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;CFLAGS=-fPIC ./configure --enable-shared=no&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;make&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /machine:X86"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ev.lib "
+				OutputFile="K:\KinCode\levent\levent\bin\MinSizeRel\event.so"
+				Version="0.0"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\libev\.libs\$(OutDir),..\libev\.libs"
+				ProgramDatabaseFile="K:\KinCode\levent\levent\bin\MinSizeRel\event.pdb"
+				ImportLibrary="K:\KinCode\levent\levent\bin\MinSizeRel\event.lib"/>
+		</Configuration>
+		<Configuration
+			Name="RelWithDebInfo|Win32"
+			OutputDirectory="RelWithDebInfo"
+			IntermediateDirectory="event.dir\RelWithDebInfo"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				AssemblerListingLocation="RelWithDebInfo/"
+				CompileAs="1"
+				DebugInformationFormat="3"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="1"
+				Optimization="2"
+				RuntimeLibrary="2"
+				SuppressStartupBanner="FALSE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;;event_EXPORTS"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;;event_EXPORTS"/>
+			<Tool
+				Name="VCMIDLTool"
+				AdditionalIncludeDirectories="K:\KinCode\levent\levent\3rd\lua\inc;K:\KinCode\levent\levent\libev;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"
+CommandLine="cd K:\KinCode\levent\levent\libev&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;K:&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;CFLAGS=-fPIC ./configure --enable-shared=no&#x0D;&#x0A;if errorlevel 1 goto :VCReportError&#x0D;&#x0A;make&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /machine:X86 /debug"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ev.lib "
+				OutputFile="K:\KinCode\levent\levent\bin\RelWithDebInfo\event.so"
+				Version="0.0"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\libev\.libs\$(OutDir),..\libev\.libs"
+				ProgramDatabaseFile="K:\KinCode\levent\levent\bin\RelWithDebInfo\event.pdb"
+				GenerateDebugInformation="TRUE"
+				ImportLibrary="K:\KinCode\levent\levent\bin\RelWithDebInfo\event.lib"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+			<File
+				RelativePath="K:\KinCode\levent\levent\CMakeLists.txt">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule K:/KinCode/levent/levent/CMakeLists.txt"
+					CommandLine="K:\KinCode\cmake-3.0.0-win32-x86\bin\cmake.exe -HK:/KinCode/levent/levent -BK:/KinCode/levent/levent/bin --check-stamp-file K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="K:\KinCode\levent\levent\CMakeLists.txt;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompilerABI.cpp;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\levent\levent\cmake\dist.cmake;K:\KinCode\levent\levent\cmake\FindLua.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\levent\levent\CMakeLists.txt;"
+					Outputs="K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule K:/KinCode/levent/levent/CMakeLists.txt"
+					CommandLine="K:\KinCode\cmake-3.0.0-win32-x86\bin\cmake.exe -HK:/KinCode/levent/levent -BK:/KinCode/levent/levent/bin --check-stamp-file K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="K:\KinCode\levent\levent\CMakeLists.txt;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompilerABI.cpp;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\levent\levent\cmake\dist.cmake;K:\KinCode\levent\levent\cmake\FindLua.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\levent\levent\CMakeLists.txt;"
+					Outputs="K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MinSizeRel|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule K:/KinCode/levent/levent/CMakeLists.txt"
+					CommandLine="K:\KinCode\cmake-3.0.0-win32-x86\bin\cmake.exe -HK:/KinCode/levent/levent -BK:/KinCode/levent/levent/bin --check-stamp-file K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="K:\KinCode\levent\levent\CMakeLists.txt;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompilerABI.cpp;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\levent\levent\cmake\dist.cmake;K:\KinCode\levent\levent\cmake\FindLua.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\levent\levent\CMakeLists.txt;"
+					Outputs="K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="RelWithDebInfo|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule K:/KinCode/levent/levent/CMakeLists.txt"
+					CommandLine="K:\KinCode\cmake-3.0.0-win32-x86\bin\cmake.exe -HK:/KinCode/levent/levent -BK:/KinCode/levent/levent/bin --check-stamp-file K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="K:\KinCode\levent\levent\CMakeLists.txt;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystem.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerId.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CompilerId\VS-7.vcproj.in;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeFindBinUtils.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeClDeps.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeSystemSpecificInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeGenericSystem.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\WindowsPaths.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-C.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeRCInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestRCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompilerABI.c;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXInformation.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC-CXX.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\Platform\Windows-MSVC.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCommonLanguageInclude.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCXXCompiler.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeTestCompilerCommon.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeDetermineCompilerABI.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseImplicitLinkInfo.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompilerABI.cpp;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeCXXCompiler.cmake.in;K:\KinCode\levent\levent\bin\CMakeFiles\3.0.0\CMakeCXXCompiler.cmake;K:\KinCode\levent\levent\cmake\dist.cmake;K:\KinCode\levent\levent\cmake\FindLua.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageHandleStandardArgs.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\FindPackageMessage.cmake;K:\KinCode\cmake-3.0.0-win32-x86\share\cmake-3.0\Modules\CMakeParseArguments.cmake;K:\KinCode\levent\levent\CMakeLists.txt;"
+					Outputs="K:\KinCode\levent\levent\bin\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+			</File>
+		<Filter
+			Name="Source Files"
+			Filter="">
+			<File
+				RelativePath="K:\KinCode\levent\levent\levent\lua-event.c">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
